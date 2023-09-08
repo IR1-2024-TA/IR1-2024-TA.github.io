@@ -3,14 +3,21 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Instructions for updating the data showed in the app
-1. Update the files (must be kept with the same name and in the same location):
-    - `./src/assets/assignment1_1.json`
-    - `./src/assets/assignment1_2.json`
-    - `./src/assets/assignment2_1.json`
-    - `./src/assets/assignment2_2.json`
-    - The json file must be a list of dictionaries where the keys will be the names of the columns and their
+1. Update the following files (must be kept with the same name and in the same location):
+        - `./src/assets/assignment1_1.json`
+        - `./src/assets/assignment1_2.json`
+        - `./src/assets/assignment2_1.json`
+        - `./src/assets/assignment2_2.json`
+    - Each json file must be a list of dictionaries where the keys will be the names of the columns and their
     values the values of the entry in the row.
-2. Execute `ng build --configuration=production`, where it will generate the new app files in the `./docs` folder
+2. Push the files in the `./docs` in the repository 
+    - `git add ./src/assets`
+    - `git commit -m "New data files"`
+    - `git push`
+
+## Instructions for updating the code and pushing a new distribution version
+1. Update the code,
+2. Execute `ng build --configuration=production`, where it will generate the new app files in the `./docs` folder,
 3. Push the files in the `./docs` in the repository 
     - `git add ./docs`
     - `git commit -m "New app distribution files"`
