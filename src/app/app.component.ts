@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ir-dashboard';
+  public assignment_data_urls: { [id: string] : string; }  = {
+    'assignment1-1': 'https://vpariza.github.io/assets/table_data.json',
+    'assignment1-2': 'https://vpariza.github.io/assets/table_data.json',
+    'assignment2-1': 'https://vpariza.github.io/assets/table_data.json',
+    'assignment2-2': 'https://vpariza.github.io/assets/table_data.json',
+  };
+
+  constructor() {
+  }
+
+  get_tab_names(){
+    return Object.keys(this.assignment_data_urls);
+  }
 }
