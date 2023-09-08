@@ -1,35 +1,9 @@
 
-<style>
-h3 {
-  --s: 0.1em;   /* the thickness of the line */
-  --c: rgb(255, 191, 0); /* the color */
-  
-  color: #0000;
-  padding-bottom: var(--s);
-  background: 
-    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
-    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: 0.5s;
-}
-h3:hover {--_p: 100%}
-
-
-body {
-  height: 100vh;
-  margin: 0;
-  display: grid;
-  place-content: center;
-}
-h3 {
-  font-family: system-ui, sans-serif;
-  font-size: 3rem;
-  cursor: pointer;
-}
-
-</style>
-<h3>Information Retrieval UvA 2024 Class</h3>
+<!-- <mat-card> -->
+    <h3 data-text="IR 1 UvA - 2024 Class" style="color:white"></h3>
+<!-- </mat-card> -->
+<hr>
+<!-- <h4>Information Retrieval 1</h4> -->
 <mat-card>
     <mat-tab-group>
         <mat-tab *ngFor="let key of get_tab_names()" label="{{key}}"> 
