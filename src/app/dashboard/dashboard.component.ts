@@ -24,7 +24,6 @@ export class DashboardComponent implements AfterViewInit{
   constructor(private http:HttpClient) {}
 
   update_table(){
-    console.log(this.dataUrl)
       // Assign the data to the data source for the table to render
       this.dataSource = new MatTableDataSource(this.dataEntries);
       this.getJSON().subscribe(data => {

@@ -3,15 +3,17 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Instructions for updating the data showed in the app
-1. Update the following files (must be kept with the same name and in the same location):
-        - `./src/assets/assignment1_1.json`
-        - `./src/assets/assignment1_2.json`
-        - `./src/assets/assignment2_1.json`
-        - `./src/assets/assignment2_2.json`
+**Note**: If you also plan to make changes to the code, note that the next step for generating the files distribution, will delete all the files in the docs including the data you uploaded before. Hence, everytime you need to make sure to push the new data with the changes to the code. 
+
+1. Update the following files (must be kept with the same name and in the same location in `main`):
+        - `./data/assignment1_1.json`
+        - `./data/assignment1_2.json`
+        - `./data/assignment2_1.json`
+        - `./data/assignment2_2.json`
     - Each json file must be a list of dictionaries where the keys will be the names of the columns and their
     values the values of the entry in the row.
 2. Push the files in the `./docs` in the repository 
-    - `git add ./src/assets`
+    - `git add ./docs`
     - `git commit -m "New data files"`
     - `git push`
 
