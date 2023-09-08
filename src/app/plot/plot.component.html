@@ -1,0 +1,22 @@
+<mat-card>
+  <form action="" style="padding: 20px;">
+    <div class="form-field-group">
+   <span class="form-field-label">Attribute:</span>
+     <mat-form-field>
+        <mat-label>Attribute:</mat-label>
+       <mat-select name="countryString" [(value)]="selectedAttribute" (selectionChange)="onSelectionChange(selectedAttribute)">
+          <mat-option *ngFor="let key of get_attributes()" [value]="key">{{key}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+
+
+</mat-card>
+
+<mat-card>
+<ag-charts-angular #hplot
+    style="height: 100%"
+    [options]="options"
+  ></ag-charts-angular>
+</mat-card>

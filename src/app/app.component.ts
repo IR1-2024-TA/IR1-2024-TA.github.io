@@ -13,8 +13,7 @@ export class AppComponent {
     'assignment2-2': 'https://ir1-2024-ta.github.io/assets/assignment2_2.json',
   };
 
-  constructor() {
-  }
+  constructor() {}
 
   get_tab_names(){
     return Object.keys(this.assignment_data_urls);

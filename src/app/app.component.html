@@ -8,14 +8,17 @@
     <mat-tab-group>
         <mat-tab *ngFor="let key of get_tab_names()" label="{{key}}"> 
             <mat-tab-group>
-            <mat-tab label="Results Table"> 
-                <app-dashboard [dataUrl]="assignment_data_urls[key]"></app-dashboard>
-            </mat-tab>
+                <mat-tab label="Results Table"> 
+                    <app-dashboard [dataUrl]="assignment_data_urls[key]"></app-dashboard>
+                </mat-tab>
+                <mat-tab label="Results Plot"> 
+                    <app-plot [dataUrl]="assignment_data_urls[key]"></app-plot>
+                </mat-tab>
+
+            
             </mat-tab-group>
         </mat-tab>
     </mat-tab-group>
 </mat-card>
-
-
 
 <!-- <router-outlet></router-outlet> -->

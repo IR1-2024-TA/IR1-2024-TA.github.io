@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,14 +15,28 @@ import {MatCardModule} from '@angular/material/card';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations' 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+import { AgChartsAngularModule } from 'ag-charts-angular';
+
 import { MatTabsModule } from '@angular/material/tabs';
+import { PlotComponent } from './plot/plot.component';
+import {MatSelectModule} from '@angular/material/select';
+import {FormsModule} from '@angular/forms';
+
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    PlotComponent
   ],
   imports: [
+    FormsModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatMenuModule,
+    AgChartsAngularModule,
     MatTabsModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -36,6 +50,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatSortModule,
     MatPaginatorModule
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA ],
   providers: [
     HttpClient
   ],
