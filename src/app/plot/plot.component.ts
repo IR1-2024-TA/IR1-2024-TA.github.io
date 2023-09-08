@@ -1,8 +1,7 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { AgChartOptions } from 'ag-charts-community';
-import { getData } from './data';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 
 
@@ -14,6 +13,15 @@ import { FormControl } from '@angular/forms';
 })
 export class PlotComponent {
   @Input() dataUrl: string = '';
+
+  isVisible$ = new BehaviorSubject(true);
+
+  destroyAndReload() {
+    this.isVisible$.next(false);
+    setTimeout(() => {
+        this.isVisible$.next(true);
+    }, 1);
+}
 
   public options: AgChartOptions;
   attributes: string[] = [];
@@ -29,9 +37,14 @@ export class PlotComponent {
     this.options = {}
   }
 
-  update_options(data_key:string,xAxis:string='', yAxis:string=''){
-    let data = []
+  update_options(data_key:string, xAxis:string='', yAxis:string=''){
+    let data = [];
     if(this.dataEntries.length > 0) {
+      for(let entry of this.dataEntries){
+        let new_entry: { [id: string] : string; } = {};
+        new_entry[data_key] = entry[data_key];
+        data.push(new_entry);
+      }
       data = this.dataEntries;
     }
     if(typeof this.dataEntries[0][data_key] != "number"){
@@ -78,7 +91,8 @@ export class PlotComponent {
       if(this.selectedAttribute.length > 0){
         attribute = this.selectedAttribute
       }
-      this.update_options(attribute, attribute, 'Distribution of counts.')
+      this.update_options(attribute, attribute, 'Distribution of counts');
+      this.destroyAndReload();
     });
   }
 

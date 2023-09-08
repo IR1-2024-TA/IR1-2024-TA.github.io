@@ -1,61 +1,60 @@
 [{
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz"
+    "team": 1,
+    "score_1": 80,
+    "score_2": 75
   },
   {
-    "id": 2,
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv"
+    "team": 2,
+    
+    "score_1": 90,
+    "score_2": 75
   },
   {
-    "id": 3,
-    "name": "Clementine Bauch",
-    "username": "Samantha",
-    "email": "Nathan@yesenia.net"
+    "team": 3,
+    
+    "score_1": 60,
+    "score_2": 85
   },
   {
-    "id": 4,
-    "name": "Patricia Lebsack",
-    "username": "Karianne",
-    "email": "Julianne.OConner@kory.org"
+    "team": 4,
+    
+    "score_1": 60,
+    "score_2": 95
   },
   {
-    "id": 5,
-    "name": "Chelsey Dietrich",
-    "username": "Kamren",
-    "email": "Lucio_Hettinger@annie.ca"
+    "team": 5,
+    
+    "score_1": 80,
+    "score_2": 95
   },
   {
-    "id": 6,
-    "name": "Mrs. Dennis Schulist",
-    "username": "Leopoldo_Corkery",
-    "email": "Karley_Dach@jasper.info"
+    "team": 6,
+    
+    "score_1": 80,
+    "score_2": 65
   },
   {
-    "id": 7,
-    "name": "Kurtis Weissnat",
-    "username": "Elwyn.Skiles",
-    "email": "Telly.Hoeger@billy.biz"
+    "team": 7,
+    
+    "score_1": 80,
+    "score_2": 65
   },
   {
-    "id": 8,
-    "name": "Nicholas Runolfsdottir V",
-    "username": "Maxime_Nienow",
-    "email": "Sherwood@rosamond.me"
+    "team": 8,
+    
+    "score_1": 100,
+    "score_2": 75
   },
   {
-    "id": 9,
-    "name": "Glenna Reichert",
-    "username": "Delphine",
-    "email": "Chaim_McDermott@dana.io"
+    "team": 9,
+    
+    "score_1": 90,
+    "score_2": 65
   },
   {
-    "id": 10,
-    "name": "Clementina DuBuque",
-    "username": "Moriah.Stanton",
-    "email": "Rey.Padberg@karina.biz"
+    "team": 10,
+    
+    "score_1": 90,
+    "score_2": 65
   }
 ]

@@ -13,10 +13,11 @@
 
 
 </mat-card>
-
+<ng-container *ngIf="isVisible$ | async">
 <mat-card>
-<ag-charts-angular #hplot
-    style="height: 100%"
-    [options]="options"
-  ></ag-charts-angular>
-</mat-card>
+  <ag-charts-angular #hplot
+      style="height: 100%"
+      [options]="options"
+    ></ag-charts-angular>
+  </mat-card>
+</ng-container>
